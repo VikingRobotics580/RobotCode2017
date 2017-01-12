@@ -12,8 +12,6 @@
 
 #include <vector>
 
-class IterativeRobot;
-
 class Robot: public IterativeRobot{
 	public:
 		Robot(); //Constructor for the Robot class.
