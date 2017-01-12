@@ -10,6 +10,8 @@
 #ifndef _MACROS_H_
 #define _MACROS_H_
 
+#include <stdio.h>
+
 #ifdef ENABLE_ERROR
 #define log_err(message,...) printf("[ERROR]: (%s,%d) - " message "\n",__FILE__,__LINE__,##__VA_ARGS__)
 #else
