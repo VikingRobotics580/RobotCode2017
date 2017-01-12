@@ -4,4 +4,4 @@ Debug/
 *.o
 build/
 bin/
-
+Release/
