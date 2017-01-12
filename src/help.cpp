@@ -10,10 +10,13 @@
 #include "help.h"
 #include "math.h"
 
-/* Calculate pi using an infinite series, to an arbitrary accuracy.
+/*  PI
+ * Calculate pi using an infinite series, to an arbitrary accuracy.
  * Returns float: an approximate value of pi
  * Arguments:
  *    int n: the distance in the series to compute to
+ *
+ * n must be sufficiently large to calculate a usable value of pi.
  */
 float help::maths::pi(int n) {
 	float ret = 0;
@@ -22,6 +25,17 @@ float help::maths::pi(int n) {
 	}
 	return 4 * ret;
 }
+
+/* SIN / COS
+ *
+ * Calculates a value of sine or cosine using a Taylor series.
+ * Returns float: an approximate value of the sine or cosine.
+ * Arguments:
+ *     float x: the value to take the sin or cosine of.
+ *     int n: the number of non-zero Taylor series values to compute to
+ *
+ * n must be sufficiently large to calculate a usable value.
+ * */
 
 float help::maths::sin(float x, int n) {
 	float ret = 0;
