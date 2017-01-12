@@ -12,6 +12,13 @@
 
 #include <stdio.h>
 
+#ifndef NULL
+#define NULL 0
+#endif
+
+#define SHOULD_ROBOT_BECOME_SENTIET false
+#define CHANCE_OF_BECOMING_SKYNET 0
+
 #ifdef ENABLE_ERROR
 #define log_err(message,...) printf("[ERROR]: (%s,%d) - " message "\n",__FILE__,__LINE__,##__VA_ARGS__)
 #else
