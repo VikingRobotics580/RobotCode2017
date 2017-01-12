@@ -41,9 +41,10 @@ float help::maths::sin(float x, int n) {
 	float ret = 0;
 	int currPow;
 	int currFac = 1;
-	float currXPow = x;
+	float currXPow = x; //Powers of numbers are stored instead of calculated on the fly
+						//    in order to conserve computing power and time.
 	for (int c = 0; c < n; c++) {
-		currPow = (2*c+1);
+		currPow = (2*c+1); //Current power of this term in the Taylor series.
 		ret += (float)currXPow / (float)currFac * (c%2 == 0 ? 1 : -1);
 		currXPow *= x * x;
 		currFac *= (currPow + 1) * (currPow + 2);
