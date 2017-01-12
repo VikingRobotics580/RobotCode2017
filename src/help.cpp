@@ -23,10 +23,6 @@ float help::maths::pi(int n) {
 	return 4 * ret;
 }
 
-int help::maths::factorial(int n) {
- //TODO: finish this
-}
-
 float help::maths::sin(float x, int n) {
 	float ret = 0;
 	int currPow;
@@ -34,6 +30,20 @@ float help::maths::sin(float x, int n) {
 	float currXPow = x;
 	for (int c = 0; c < n; c++) {
 		currPow = (2*c+1);
+		ret += (float)currXPow / (float)currFac * (c%2 == 0 ? 1 : -1);
+		currXPow *= x * x;
+		currFac *= (currPow + 1) * (currPow + 2);
+	}
+	return ret;
+}
+
+float help::maths::cos(float x, int n) {
+	float ret = 0;
+	int currPow;
+	int currFac = 1;
+	float currXPow = 1;
+	for (int c = 0; c < n; c++) {
+		currPow = (2*c);
 		ret += (float)currXPow / (float)currFac * (c%2 == 0 ? 1 : -1);
 		currXPow *= x * x;
 		currFac *= (currPow + 1) * (currPow + 2);
