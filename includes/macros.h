@@ -16,7 +16,7 @@
 #define NULL 0
 #endif
 
-#define SHOULD_ROBOT_BECOME_SENTIET false
+#define SHOULD_ROBOT_BECOME_SENTIENT false
 #define CHANCE_OF_BECOMING_SKYNET 0
 
 #ifdef ENABLE_ERROR
