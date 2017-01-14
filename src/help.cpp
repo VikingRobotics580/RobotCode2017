@@ -8,7 +8,6 @@
  */
 
 #include "help.h"
-#include "math.h"
 
 /*  PI
  * Calculate pi using an infinite series, to an arbitrary accuracy.

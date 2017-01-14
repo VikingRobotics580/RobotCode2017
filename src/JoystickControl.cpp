@@ -7,6 +7,8 @@
  *
  */
 
+#include "JoystickControl.h" //I have no idea why, but Eclipse allowed me to omit this line.
+
 JoystickControl::JoystickControl() {
 
 }
