@@ -8,6 +8,9 @@
 #ifndef INCLUDES_JOYSTICKCONTROL_H_
 #define INCLUDES_JOYSTICKCONTROL_H_
 
+#include <vector>
+#include "WPILib.h"
+
 class Robot;
 
 class JoystickControl {
@@ -16,7 +19,14 @@ class JoystickControl {
 		~JoystickControl();
 		int init();
 		bool buttonState(int button);
-		double joyState(int joystick);
+		double joyStateX(int joystick);
+		double joyStateY(int joystick);
+		double joyStateZ(int joystick);
+	private:
+		const int NUM_BUTTONS = 5;
+		const int NUM_JOYSTICKS = 2;
+		JoystickButton* m_buttons [NUM_BUTTONS];
+		Joystick* m_joysticks [NUM_JOYSTICKS];
 };
 
 

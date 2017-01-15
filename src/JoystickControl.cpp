@@ -8,9 +8,15 @@
  */
 
 #include "JoystickControl.h" //I have no idea why, but Eclipse allowed me to omit this line.
+#include "WPILib.h"
 
 JoystickControl::JoystickControl() {
-
+	for (int i = 0; i < NUM_JOYSTICKS; i++) {
+		m_joysticks[i] = new Joystick(i); //If we don't start with Joysticks 0 and 1 we need to change this.
+	}
+	for (int i = 0; i < NUM_BUTTONS; i++) {
+		m_buttons[i] = new JoystickButton(i);
+	}
 }
 
 JoystickControl::~JoystickControl() {
@@ -22,11 +28,18 @@ int JoystickControl::init() {
 }
 
 bool JoystickControl::buttonState(int button) {
-	return false;
+	return m_buttons[button]->Get();
 }
 
-double JoystickControl::joyState(int joystick) {
-	return 0.00;
+double JoystickControl::joyStateX(int joystick) {
+	return m_joysticks[joystick]->GetX();
 }
 
+double JoystickControl::joyStateY(int joystick) {
+	return m_joysticks[joystick]->GetY();
+}
+
+double JoystickControl::joyStateZ(int joystick) {
+	return m_joysticks[joystick]->GetZ();
+}
 
