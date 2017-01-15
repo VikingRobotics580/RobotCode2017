@@ -20,7 +20,12 @@ JoystickControl::JoystickControl() {
 }
 
 JoystickControl::~JoystickControl() {
-
+	for (int i = 0; i < NUM_JOYSTICKS; i++) {
+			delete m_joysticks[i];
+		}
+		for (int i = 0; i < NUM_BUTTONS; i++) {
+			delete m_buttons[i];
+		}
 }
 
 int JoystickControl::init() {
