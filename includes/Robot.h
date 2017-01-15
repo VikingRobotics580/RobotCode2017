@@ -12,6 +12,7 @@
 
 #include <vector>
 
+
 class Robot: public IterativeRobot{
 	public:
 		Robot(); //Constructor for the Robot class.
@@ -32,6 +33,7 @@ class Robot: public IterativeRobot{
 		void End(); //Called when robot is done.
 	private:
 		const bool IS_DRIVER_DUMB = true;
+		JoystickControl* m_control;
 };
 
 #endif /* INCLUDES_ROBOT_H_ */

@@ -9,9 +9,10 @@
 
 #include "WPILib.h"
 #include "Robot.h"
+#include "JoystickControl.h"
 
 Robot::Robot():IterativeRobot() {
-
+	this->m_control = new JoystickControl();
 }
 
 Robot::~Robot() {
