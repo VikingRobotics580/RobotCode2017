@@ -16,7 +16,8 @@ Robot::Robot():IterativeRobot() {
 }
 
 Robot::~Robot() {
-
+	this->m_control->~JoystickControl();
+	delete m_control;
 }
 
 void Robot::RobotInit() {
