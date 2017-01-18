@@ -22,7 +22,7 @@ Robot::~Robot() {
 }
 
 void Robot::RobotInit() {
-
+	this->m_control->init();
 }
 
 void Robot::AutonomousInit() {
