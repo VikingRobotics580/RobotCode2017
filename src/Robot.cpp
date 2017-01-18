@@ -8,6 +8,7 @@
  */
 
 #include "WPILib.h"
+#include "CANTalon.h"
 #include "Robot.h"
 #include "JoystickControl.h"
 
