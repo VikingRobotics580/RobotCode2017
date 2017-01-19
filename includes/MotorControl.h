@@ -15,6 +15,7 @@ class MotorControl {
 		MotorControl();
 		~MotorControl();
 		int init();
+		int move(float left, float right); //Moves robot.
 	private:
 		const int NUM_TALONS = 4; //there better fucking be 4 or more
 		RobotDrive* m_driver;

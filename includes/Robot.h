@@ -33,7 +33,8 @@ class Robot: public IterativeRobot{
 		void End(); //Called when robot is done.
 	private:
 		const bool IS_DRIVER_DUMB = true;
-		JoystickControl* m_control;
+		JoystickControl* m_joysticks;
+		MotorControl* m_motors;
 };
 
 #endif /* INCLUDES_ROBOT_H_ */

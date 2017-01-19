@@ -26,3 +26,17 @@ int MotorControl::init() {
 	return 0; //omg it worked
 }
 
+
+/*
+ * MotorControl::move
+ *
+ * Moves robot.
+ * 	 float left: value of left joystick
+ * 	 float right: value of right joystick
+ *
+ * */
+int MotorControl::move(float left, float right) {
+	this->m_driver->TankDrive(-left, right); //Note to self - add thing.
+	//TODO add thing
+	return 0;
+}
