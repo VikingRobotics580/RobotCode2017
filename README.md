@@ -3,6 +3,10 @@
 ##Description
 Code for the FIRST Robotics team 580's robot. It is written in C++ and compiled using [Eclipse](http://www.eclipse.org/downloads/). Instructions for setting up Eclipse to work with FRC Robotics Code can be found [here](http://wpilib.screenstepslive.com/s/4485/m/13809/l/145002-installing-eclipse-c-java).
 
+##[Contributors](https://github.com/VikingRobotics580/RobotCode2017/graphs/contributors)
+
+Maxwell Chow
+
 ## Deploying
 1) Have Eclipse running
 
@@ -15,6 +19,8 @@ Code for the FIRST Robotics team 580's robot. It is written in C++ and compiled 
 3) Right click on the project (Note: Project, not the source code), and hover over the option reading "Run as"
 
 4) Click on "WPILib C++ Deploy"
+
+**Note** As of January 2017, the extra [CANTalon Library](http://www.ctr-electronics.com/control-system/hro.html#product_tabs_technical_resources) is now necessary to compile the robot code.
 
 ## Controlling the Robot
 > WARNING!
