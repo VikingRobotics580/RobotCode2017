@@ -18,6 +18,15 @@ namespace help {
 		float sin(float x, int n); //Calculate sin using an infinite  series
 		float cos(float x, int n); //the same but with cos
 	}
+	namespace logging {
+
+		void info(std::string text); //Log info to console
+		void test(std::string text); //Debug info to console.
+		void warn(std::string text); //Warn error to console.
+		void error(std::string text);//Scream loudly at user.
+
+		void log(std::string text); //Alias of info.
+	}
 }
 
 

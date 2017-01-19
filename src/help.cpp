@@ -8,6 +8,7 @@
  */
 
 #include "help.h"
+#include <stdio.h>
 
 /*  PI
  * Calculate pi using an infinite series, to an arbitrary accuracy.
@@ -63,4 +64,20 @@ float help::maths::cos(float x, int n) {
 		currFac *= (currPow + 1) * (currPow + 2);
 	}
 	return ret;
+}
+
+void info(std::string text) {
+	printf("[INFO] " + text + " \n"); //todo log somewhere else too
+}
+
+void warn(std::string text) {
+	printf("[WARN] " + text + " \n");
+}
+
+void error(std::string text) {
+	printf("[ERRR] " + text + " \n");
+}
+
+void test(std::string text) {
+	printf("[TEST] " + text + " \n");
 }
