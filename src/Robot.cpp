@@ -13,16 +13,20 @@
 #include "JoystickControl.h"
 
 Robot::Robot():IterativeRobot() {
-	this->m_control = new JoystickControl();
+	this->m_joysticks = new JoystickControl();
+	this->m_motors = new MotorControl();
 }
 
 Robot::~Robot() {
-	this->m_control->~JoystickControl();
-	delete m_control;
+	this->m_joysticks->~JoystickControl();
+	delete m_joysticks;
+	this->m_motors->~MotorControl();
+	delete m_motors;
 }
 
 void Robot::RobotInit() {
-	this->m_control->init();
+	this->m_joysticks->init();
+	this->m_motors->init();
 }
 
 void Robot::AutonomousInit() {
@@ -46,7 +50,9 @@ void Robot::AutonomousPeriodic() {
 }
 
 void Robot::TeleopPeriodic(){
-
+	//Move the robot, assuming Joysticks 0 and 1 as left and right.
+	m_motors->move((float) m_joysticks->joyStateY(0), (float) m_joysticks->joyStateY(0));
+	//TODO check numbers + make sure it's Y. It might be Z.
 }
 
 void Robot::TestPeriodic(){
