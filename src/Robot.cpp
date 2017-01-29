@@ -53,6 +53,9 @@ void Robot::TeleopPeriodic(){
 	//Move the robot, assuming Joysticks 0 and 1 as left and right.
 	m_motors->move((float) m_joysticks->joyStateY(0), (float) m_joysticks->joyStateY(0));
 	//TODO check numbers + make sure it's Y. It might be Z.
+
+	m_motors->shoot(0.5F);
+	//TODO hook this up to joysticks somehow.
 }
 
 void Robot::TestPeriodic(){
